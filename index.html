@@ -9,19 +9,34 @@
 </head>
 <body>
     <h1>Coding Quiz</h1>
-    <section id="stopWatch"> <p id="timer"> Time : 00:00:00 </p>
-         <p id="fulltime"> </p> 
+
+    <section id="stopWatch">Timer<p id="timer">0</p>
+         <p id="fulltime"></p> 
     </section> 
-    
-    <div class="quiz-container">
-        <div id="quiz"></div>
+
+    <div id="highScoreBoard">
+        <a href="highscores.html">High Scores</a>
     </div>
-        <button id="start">Start Quiz</button>
-        <button id="next">Next Question</button>
-        <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
+
+    <div class="quiz-container">
+        <div class="title">Coding Quiz</div>
+        <div id="question" class="question"></div>
+        <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
+        <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
+        <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
+        <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
+        <br>
+        <button id="start"onclick="clock()">Start Quiz</button>
+        <button id="next" onclick="loadNExtQuestion();">Next Question</button>
+        <button id="submit" onclick="clearInterval(myTimer)">Submit Quiz</button>
+    </div>
+
+    </div id="result" class="resultContainer" style="display:none";>
+    <div>   
         
         
-<!--<script src="Assets/questions.js/script.js"></script> -->  
+    <script src="Assets/script.js"></script> 
+    <script src="Assets/questions.js"></script> 
+
 </body>
 </html>
