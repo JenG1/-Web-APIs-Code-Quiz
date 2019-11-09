@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
-
+/*Quiz Page*/
 body{
     font-size: 20px;
     font-family:  'Work Sans', sans-serif;
@@ -129,4 +129,4 @@ button:hover{
   margin-top: 40px;
 }
 
-//High Score Page
+/*High Score Page*/

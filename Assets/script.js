@@ -1,11 +1,11 @@
 //
 
 var score = 0;
+var response = "";
 
 
 for(var i =0; i < questions.length; i++){
-    var response = document.getElementById("quiz").innerHTML;
-    if(response =+ questions[i].answer){
+    if(response === questions[i].answer){
         score++
     } else{
         timer++;
