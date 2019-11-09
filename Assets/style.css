@@ -75,7 +75,7 @@ h1{
   color: #fff;
 }
 
-.question{
+.question, .highScoreList{
   font-size: 30px;
   margin-bottom: 10px;
 }
@@ -104,6 +104,11 @@ button:hover{
 }
 
 
+#start:onClick{
+  style: visibility 'hidden';
+}
+
+
 
 .slide{
   position: absolute;
@@ -118,9 +123,10 @@ button:hover{
   opacity: 1;
   z-index: 2;
 }
-.quiz-container{
+.quiz-container, .results-container{
   position: relative;
   height: 200px;
   margin-top: 40px;
 }
 
+//High Score Page
