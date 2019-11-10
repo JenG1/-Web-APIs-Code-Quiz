@@ -10,9 +10,9 @@ var opt2 = document.getElementById("opt2");
 var opt3 = document.getElementById("opt3");
 var opt4 = document.getElementById("opt4");
 var nextBtn = document.getElementById("next");
-var subBtn = document.getElementById("submit")
-var resultContainer = document.getElementById("result")
-var correctAudio = new Audio("Sounds/correctAnswer.mp3");
+var startBtn = document.getElementById("start");
+var subBtn = document.getElementById("submit");
+var result = document.getElementById("result");
 
 
 //Load question and choices for user to select.
@@ -27,24 +27,23 @@ function loadQuestion (questionIndex){
 };
 //Go through all questions, take user option and check if that is the correct answer. If answer is correct add to score, if user is wrong go to next question. If there are not more questions stop clock and display score.
 function loadNextQuestion(){
-    //User clicks and checks answer
     var userChoice = document.querySelector('input[type=radio]:checked');
-    //If user does not select an option
     if(!userChoice){
-        alert("Please select answer");
+        alert("Please select answer.");
         return;
     }
     var answer = userChoice.value;
     if(questions[currentQuestion].answer === answer){
-        score++;
-        correctAudio.play();
+        score += 1;
     }
     userChoice.checked = false;
     currentQuestion++;
-
-    //When user answers the last question  write final score in result element.
     if (currentQuestion == totquestions){
-        document.getElementById("result").innerHTML = score;
+        startBtn.style.visibility='hidden';
+        nextBtn.style.visibility='hidden';
+        quizContainer.style.display="none";
+        result.style.display="";
+        result.textContent = score;
         return;
     }
     loadQuestion(currentQuestion);
