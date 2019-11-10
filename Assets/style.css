@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+} 
 /*Quiz Page*/
 body{
     font-size: 20px;
@@ -84,14 +88,13 @@ h1{
 }
 
 .option{
-  width: 470px;
+
   display: inline-block;
   padding: 10px 0 px 10px 15px;
-  vertical-align: middle;
   background: rgba(255,255,255,0.5);
+  border-radius:20px;
   margin: 10px 0px 10px 10px;
   color: black;
-  border-radius: 20px;
 }
 
 .option.hover{
