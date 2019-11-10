@@ -24,11 +24,10 @@ body{
     font-family:  'Work Sans', sans-serif;
     font-size: 20px;
     background-color: #279;
-    color: #fff;
+    color:  #f6f6f6;
     border: 0px;
-    border-radius: 3px;
+    border-radius: 20px;
     padding: 10px;
-    cursor: pointer;
     top:382px;
     font-weight: 300;
     margin: 0px;
@@ -40,7 +39,7 @@ section{
     font-family:  'Work Sans', sans-serif;
     font-size: 22px;
     background-color: orangered;
-    color: #fff;
+    color: #f6f6f6;
     border: 0px;
     border-radius: 3px;
     padding: 20px;
@@ -72,43 +71,49 @@ h1{
   padding: 10px;
   font-size: 20px;
   background-color: #279;
-  color: #fff;
+  color: #f6f6f6;
 }
 
 .question, .highScoreList{
-  font-size: 30px;
-  margin-bottom: 10px;
+  padding:20px; 
+  font-size: 20px;
+  background-color: #279;
+  border-radius: 20px;
+  margin: 10px 0 10px 0;
+  color: #f6f6f6;
 }
-.answers {
-  margin-bottom: 20px;
-  text-align: left;
+
+.option{
+  width: 470px;
   display: inline-block;
+  padding: 10px 0 px 10px 15px;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.5);
+  margin: 10px 0px 10px 10px;
+  color: black;
+  border-radius: 20px;
 }
-.answers label{
-  display: block;
-  margin-bottom: 10px;
+
+.option.hover{
+  background:  rgb(46, 120, 150);
+  color: #f6f6f6;
 }
+
 button{
   font-family: 'Work Sans', sans-serif;
     font-size: 22px;
     background-color: #279;
-    color: #fff;
+    color: #f6f6f6;
     border: 0px;
-    border-radius: 3px;
+    border-radius: 20px;
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
 }
+
 button:hover{
     background-color: #38a;
 }
-
-
-#start:onClick{
-  style: visibility 'hidden';
-}
-
-
 
 .slide{
   position: absolute;

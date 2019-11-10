@@ -20,23 +20,23 @@
     </div>
 
     <div class="quiz-container">
-        <div class="title">Coding Quiz</div>
-        <div id="question" class="question"></div>
+        <div id="question" class="question">Questions</div>
         <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
         <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
         <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
         <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
         <br>
-        <button id="start"onclick="clock()">Start Quiz</button>
+        <button id="start"onclick="clock();loadQuestion(currentQuestion);">Start Quiz</button>
         <button id="next" onclick="loadNextQuestion();">Next Question</button>
         <button id="submit" onclick="clearInterval(myTimer)">Submit Quiz</button>
     </div>
 
     </div id="result" class="resultContainer" style="display:none";>
-    <div>   
-             
+    <div>  
+
+    <script src="Assets/questions.js"></script>         
     <script src="Assets/script.js"></script> 
-    <script src="Assets/questions.js"></script> 
+
 
 </body>
 </html>
