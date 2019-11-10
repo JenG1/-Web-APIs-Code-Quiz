@@ -22,10 +22,12 @@
         <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
         <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
         <br>
-        <button id="start"onclick="clock();loadQuestion(currentQuestion);">Start Quiz</button>
-        <button id="next" onclick="loadNextQuestion();">Next Question</button>
-        <button id="submit" onclick="clearInterval(myTimer);disableButton()">Submit Quiz</button>
-        <a href="highscores.html">High Scores</a> 
+        <button id="start"onclick="clock();loadQuestion(currentQuestion);">Start</button>
+        <button id="next" onclick="loadNextQuestion();">Next</button><br>
+        <button id="submit" onclick="clearInterval(myTimer);disableButton()">Finish</button>
+        <form style="display: inline" action="highscores.html" method="get">
+                <button>Scores</button>
+             </form>
     </div>
 
     </div id="result" class="resultContainer" style="display:none";>

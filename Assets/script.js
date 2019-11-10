@@ -1,4 +1,4 @@
-//Declare variables
+//Declare variables.
 var currentQuestion = 0;
 var score = 0;
 var c = 60;
@@ -24,7 +24,7 @@ function loadQuestion (questionIndex){
     opt3.textContent = q.option3;
     opt4.textContent = q.option4;
 };
-//Go through all questions, take user option anc check if that is the correct answer. If answer is correct add to score, if user is wrong go to next question. If there are not more questions stop clock and display score.
+//Go through all questions, take user option and check if that is the correct answer. If answer is correct add to score, if user is wrong go to next question. If there are not more questions stop clock and display score.
 function loadNextQuestion(){
     //User clicks and checks answer
     var userChoice = document.querySelector('input[type=radio]:checked');
@@ -44,7 +44,7 @@ function loadNextQuestion(){
     userChoice.checked = false;
     currentQuestion++;
 
-    //Add Penalty Here
+    //When user answers the last question  write final score in result element.
     if (currentQuestion == totquestions){
         document.getElementById("result").innerHTML = score;
         return;
