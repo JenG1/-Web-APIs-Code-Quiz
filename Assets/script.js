@@ -12,6 +12,7 @@ var opt4 = document.getElementById("opt4");
 var nextBtn = document.getElementById("next");
 var subBtn = document.getElementById("submit")
 var resultContainer = document.getElementById("result")
+var correctAudio = new Audio("Sounds/correctAnswer.mp3");
 
 
 //Load question and choices for user to select.
@@ -36,10 +37,7 @@ function loadNextQuestion(){
     var answer = userChoice.value;
     if(questions[currentQuestion].answer === answer){
         score++;
-        document.getElementById("result").innerHTML = score;
-        var correctAudio = new Audio("Sounds/correctAnswer.mp3");
         correctAudio.play();
-
     }
     userChoice.checked = false;
     currentQuestion++;
@@ -51,6 +49,12 @@ function loadNextQuestion(){
     }
     loadQuestion(currentQuestion);
 }
+
+//Calculate score.
+// function calcScore(){
+//     document.getElementById("result").score;
+//     return;
+// }
 
 
 //Stopwatch

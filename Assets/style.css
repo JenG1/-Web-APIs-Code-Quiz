@@ -131,7 +131,7 @@ button:hover{
   opacity: 1;
   z-index: 2;
 }
-.quiz-container, .results-container{
+.quiz-container, .results-container, .main-resultContainer{
   position: relative;
   height: 200px;
   margin-top: 40px;
