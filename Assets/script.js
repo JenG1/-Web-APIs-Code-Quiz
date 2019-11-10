@@ -13,8 +13,10 @@ var nextBtn = document.getElementById("next");
 var subBtn = document.getElementById("submit")
 var resultContainer = document.getElementById("result")
 
+
 //Load question and choices for user to select.
 function loadQuestion (questionIndex){
+    document.getElementById("start").disabled = true;
     var q = questions[questionIndex];
     questionEl.textContent = (questionIndex + 1) + '. ' + q.question;
     opt1.textContent = q.option1;
@@ -32,20 +34,23 @@ function loadNextQuestion(){
         return;
     }
     var answer = userChoice.value;
-    if(questions[currentQuestion].answer == answer){
-        score++
+    if(questions[currentQuestion].answer === answer){
+        score++;
+        document.getElementById("result").innerHTML = score;
+        var correctAudio = new Audio("Sounds/correctAnswer.mp3");
+        correctAudio.play();
+
     }
     userChoice.checked = false;
     currentQuestion++;
+
     //Add Penalty Here
     if (currentQuestion == totquestions){
-        resultContainer.textContent = "Your Score" + score;
+        document.getElementById("result").innerHTML = score;
         return;
     }
     loadQuestion(currentQuestion);
 }
-
-console.log(score);
 
 
 //Stopwatch
@@ -59,3 +64,4 @@ function clock() {
        }
     }
 }
+

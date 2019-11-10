@@ -99,7 +99,7 @@ h1{
   color: #f6f6f6;
 }
 
-button{
+button, a{
   font-family: 'Work Sans', sans-serif;
     font-size: 22px;
     background-color: #279;

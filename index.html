@@ -15,10 +15,6 @@
          <p id="fulltime"></p> 
     </section> 
 
-    <div id="highScoreBoard">
-        <a href="highscores.html">High Scores</a>
-    </div>
-
     <div class="quiz-container">
         <div id="question" class="question">Questions</div>
         <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
@@ -28,7 +24,8 @@
         <br>
         <button id="start"onclick="clock();loadQuestion(currentQuestion);">Start Quiz</button>
         <button id="next" onclick="loadNextQuestion();">Next Question</button>
-        <button id="submit" onclick="clearInterval(myTimer)">Submit Quiz</button>
+        <button id="submit" onclick="clearInterval(myTimer);disableButton()">Submit Quiz</button>
+        <a href="highscores.html">High Scores</a> 
     </div>
 
     </div id="result" class="resultContainer" style="display:none";>

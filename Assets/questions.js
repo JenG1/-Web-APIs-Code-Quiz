@@ -32,7 +32,7 @@ var questions = [{
     answer: "3"
   },
   {
-    question: "Javascript COde can be called by using",
+    question: "Javascript Code can be called by using",
     option1: "RMI",
     option2: "Triggering Event",
     option3: "PrepProcessor",
@@ -50,7 +50,7 @@ var questions = [{
     question: "The attribute of <form> tag:",
     option1: "Method",
     option2: "Action",
-    option3: "Both A and B",
+    option3: "Method and Action",
     option4: "None",
     answer: "2"
   },
